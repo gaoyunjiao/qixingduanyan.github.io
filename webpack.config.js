@@ -4,6 +4,7 @@ module.exports = {
     filename: "bundle.js",
     path: __dirname + "/dist"
   },
+  mode: "development", // 设置mode
 
   // Enable sourcemaps for debugging webpack's output.
   devtool: "source-map",

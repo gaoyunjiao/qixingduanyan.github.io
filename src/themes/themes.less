@@ -1,6 +1,27 @@
 
+// color
+@mainColor:#3998F7;
+@secondColor: #85D64D;
+@darkColor: #373737;
+@warnColor:#FB5F5F;
+@baseFontColor: white;
+
+// height
+@baseHeaderHeight: 2rem;
+@baseHeaderWidth: 100%;
+
+// padding
+@basePadding: 1rem;
+@innerPadding: 0.5rem;
+@bigPadding: 2rem;
+
 .docHeader{
-    height: 4rem;
-    background-color: pink;
-    width: 100%;
+    height: @baseHeaderHeight;
+    background-color: @mainColor;
+    color: @baseFontColor;
+    width: @baseHeaderWidth;
+    padding: @basePadding;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
