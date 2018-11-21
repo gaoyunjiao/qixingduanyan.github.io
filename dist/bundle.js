@@ -98,7 +98,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, ".docHeader {\n  height: 2rem;\n  background-color: #3998F7;\n  color: white;\n  width: 100%;\n  padding: 1rem;\n  position: fixed;\n  top: 0;\n  left: 0;\n}\n", ""]);
+exports.push([module.i, ".mainPage {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  min-height: 100vh;\n}\n.docHeader {\n  height: 2rem;\n  background-color: #159963;\n  color: white;\n  padding: 0.5rem;\n  width: 100%;\n  display: flex;\n  position: fixed;\n  left: 0;\n  top: 0;\n  justify-content: flex-start;\n  flex-direction: row;\n  align-content: center;\n  align-items: center;\n}\n.title {\n  display: flex;\n  justify-content: flex-start;\n  font-size: 1.2rem;\n  align-content: center;\n  align-items: center;\n  font-weight: bold;\n}\n.menuList {\n  padding-left: 4rem;\n  display: flex;\n  flex-direction: row;\n  align-content: center;\n  justify-content: space-between;\n  align-items: center;\n}\n.menuItem {\n  display: flex;\n  flex-direction: row;\n  padding: 0 1rem;\n}\n.menuItem a {\n  color: blanchedalmond;\n  font-weight: 300;\n}\n.menuItem a:hover {\n  color: white;\n  font-weight: 600;\n}\n.container {\n  display: flex;\n  margin-top: 50px;\n  flex: 1;\n}\n.footer {\n  display: flex;\n  height: 2rem;\n  border-top: 1px solid #eee;\n  justify-content: center;\n  align-content: center;\n  align-items: center;\n  font-size: 12px;\n}\n", ""]);
 
 // exports
 
@@ -701,6 +701,47 @@ module.exports = function (css) {
 
 /***/ }),
 
+/***/ "./src/components/Container.tsx":
+/*!**************************************!*\
+  !*** ./src/components/Container.tsx ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    }
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__(/*! react */ "react");
+__webpack_require__(/*! ../themes/themes.less */ "./src/themes/themes.less");
+;
+var ContainerComponent = /** @class */ (function (_super) {
+    __extends(ContainerComponent, _super);
+    function ContainerComponent() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    ContainerComponent.prototype.render = function () {
+        return (React.createElement("div", { className: "container" }));
+    };
+    return ContainerComponent;
+}(React.Component));
+exports.default = ContainerComponent;
+
+
+/***/ }),
+
 /***/ "./src/components/Footer.tsx":
 /*!***********************************!*\
   !*** ./src/components/Footer.tsx ***!
@@ -725,6 +766,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(/*! react */ "react");
+__webpack_require__(/*! ../themes/themes.less */ "./src/themes/themes.less");
 ;
 var FooterComponent = /** @class */ (function (_super) {
     __extends(FooterComponent, _super);
@@ -732,7 +774,7 @@ var FooterComponent = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     FooterComponent.prototype.render = function () {
-        return React.createElement("div", null);
+        return React.createElement("div", { className: "footer" }, "Powered by Yunjiao");
     };
     return FooterComponent;
 }(React.Component));
@@ -773,7 +815,17 @@ var HeaderComponent = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     HeaderComponent.prototype.render = function () {
-        return React.createElement("div", { className: "docHeader" }, "BASE HEADER");
+        return (React.createElement("div", { className: "docHeader" },
+            React.createElement("div", { className: "title" }, "\u5F97\u95F2\u8BFB\u4E66"),
+            React.createElement("div", { className: "menuList" },
+                React.createElement("div", { className: "menuItem" },
+                    React.createElement("a", null, "\u9996\u9875")),
+                React.createElement("div", { className: "menuItem" },
+                    React.createElement("a", null, "\u524D\u7AEF\u6F2B\u8C08")),
+                React.createElement("div", { className: "menuItem" },
+                    React.createElement("a", null, "\u9879\u76EE\u548C\u6846\u67B6")),
+                React.createElement("div", { className: "menuItem" },
+                    React.createElement("a", null, "\u6280\u672F\u62FE\u8DA3")))));
     };
     return HeaderComponent;
 }(React.Component));
@@ -883,6 +935,8 @@ var LeftMenu_1 = __webpack_require__(/*! ./LeftMenu */ "./src/components/LeftMen
 exports.LeftMenu = LeftMenu_1.default;
 var Hello_1 = __webpack_require__(/*! ./Hello */ "./src/components/Hello.tsx");
 exports.Hello = Hello_1.default;
+var Container_1 = __webpack_require__(/*! ./Container */ "./src/components/Container.tsx");
+exports.Container = Container_1.default;
 
 
 /***/ }),
@@ -930,14 +984,16 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(/*! react */ "react");
 var components_1 = __webpack_require__(/*! ../components */ "./src/components/index.tsx");
+__webpack_require__(/*! ../themes/themes.less */ "./src/themes/themes.less");
 var MainPage = /** @class */ (function (_super) {
     __extends(MainPage, _super);
     function MainPage() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     MainPage.prototype.render = function () {
-        return (React.createElement("div", null,
+        return (React.createElement("div", { className: "mainPage" },
             React.createElement(components_1.Header, null),
+            React.createElement(components_1.Container, null),
             React.createElement(components_1.Footer, null)));
     };
     return MainPage;
