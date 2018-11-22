@@ -10,7 +10,7 @@ export default class HeaderComponent extends React.Component<HeaderComponentProp
                 <div className="title">得闲读书</div>
                 <div className="menuList">
                     <div className="menuItem">
-                        <a>首页</a>
+                        <a href="http://www.baidu.com">首页</a>
                     </div>
                     <div className="menuItem">
                         <a>前端漫谈</a>

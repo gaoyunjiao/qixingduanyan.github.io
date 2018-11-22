@@ -819,7 +819,7 @@ var HeaderComponent = /** @class */ (function (_super) {
             React.createElement("div", { className: "title" }, "\u5F97\u95F2\u8BFB\u4E66"),
             React.createElement("div", { className: "menuList" },
                 React.createElement("div", { className: "menuItem" },
-                    React.createElement("a", null, "\u9996\u9875")),
+                    React.createElement("a", { href: "http://www.baidu.com" }, "\u9996\u9875")),
                 React.createElement("div", { className: "menuItem" },
                     React.createElement("a", null, "\u524D\u7AEF\u6F2B\u8C08")),
                 React.createElement("div", { className: "menuItem" },
