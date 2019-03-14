@@ -1,3 +1,6 @@
+const marked = require("marked");
+const renderer = new marked.Renderer();
+
 module.exports = {
   entry: "./src/index.tsx",
   output: {
@@ -25,6 +28,21 @@ module.exports = {
       {
         test: /\.less$/,
         use: ["style-loader", "css-loader", "less-loader"]
+      },
+      {
+        test: /\.md$/,
+        use: [
+          {
+            loader: "html-loader"
+          },
+          {
+            loader: "markdown-loader",
+            options: {
+              pedantic: true,
+              renderer
+            }
+          }
+        ]
       }
     ]
   },

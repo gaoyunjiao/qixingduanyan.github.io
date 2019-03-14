@@ -1,5 +1,7 @@
 import * as React from "react";
 
+import '../articals/Program-Feature.md';
+
 export interface HelloProps { compiler: string; framework: string; }
 
 export default class Hello extends React.Component<HelloProps, {}> {
