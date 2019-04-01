@@ -13,18 +13,20 @@
 @innerPadding: 0.5rem;
 @bigPadding: 2rem;
 
+// pages/main.tsx
 .mainPage {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
 }
+
+// header.tsx
 .docHeader {
   height: @baseHeaderHeight;
   background-color: @mainColor;
   color: @baseFontColor;
   padding: @basePadding;
-  width: 100%;
   display: flex;
   position: fixed;
   left: 0;
@@ -33,6 +35,8 @@
   flex-direction: row;
   align-content: center;
   align-items: center;
+  width: 100%;
+  width: 100%;
 }
 
 .title {
@@ -70,7 +74,8 @@
 }
 .container{
   display: flex;
-  margin-top: 50px;
+  margin-top: 45px;
+  background-color: @secondColor;
   flex: 1;
 }
 .footer{

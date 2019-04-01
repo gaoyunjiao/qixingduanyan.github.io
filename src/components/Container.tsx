@@ -30,11 +30,11 @@ export default class ContainerComponent extends React.Component<ContainerCompone
         const { html } = this.state
         return (
             <div className="container">
-                 {/* <ReactMarkdown
+                 <ReactMarkdown
                     className="markdown-body"
                     source={html}
                     escapeHtml={false}
-                /> */}
+                />
             </div>
         );
     }
