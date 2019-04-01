@@ -737,19 +737,27 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(/*! react */ "react");
 __webpack_require__(/*! ../themes/themes.less */ "./src/themes/themes.less");
+var ProgramFeature = __webpack_require__(/*! ../articals/Program-Feature.md */ "./src/articals/Program-Feature.md");
 ;
 var ContainerComponent = /** @class */ (function (_super) {
     __extends(ContainerComponent, _super);
-    function ContainerComponent() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
+    function ContainerComponent(props) {
+        var _this = _super.call(this, props) || this;
         _this.state = {
             html: ''
         };
         return _this;
     }
+    ContainerComponent.prototype.componentDidMount = function () {
+        console.log('markContent =====>', ProgramFeature);
+        //fetch(ProgramFeature).then(response => response.text()).then(text => this.setState({html: text}))
+        this.setState({
+            html: ProgramFeature
+        });
+    };
     ContainerComponent.prototype.render = function () {
-        return (React.createElement("div", { className: "container" },
-            React.createElement("a", { href: "../articals/Program-Feature.html" }, "\u6253\u5F00html")));
+        var html = this.state.html;
+        return (React.createElement("div", { className: "container" }));
     };
     return ContainerComponent;
 }(React.Component));
@@ -835,7 +843,7 @@ var HeaderComponent = /** @class */ (function (_super) {
             React.createElement("div", { className: "title" }, "\u5F97\u95F2\u8BFB\u4E66"),
             React.createElement("div", { className: "menuList" },
                 React.createElement("div", { className: "menuItem" },
-                    React.createElement("a", { href: "http://www.baidu.com" }, "\u9996\u9875")),
+                    React.createElement("a", { href: "http://www.gaoyunjiao.fun" }, "\u9996\u9875")),
                 React.createElement("div", { className: "menuItem" },
                     React.createElement("a", null, "\u524D\u7AEF\u6F2B\u8C08")),
                 React.createElement("div", { className: "menuItem" },
@@ -1002,6 +1010,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(/*! react */ "react");
 var components_1 = __webpack_require__(/*! ../components */ "./src/components/index.tsx");
 __webpack_require__(/*! ../themes/themes.less */ "./src/themes/themes.less");
+__webpack_require__(/*! ../articals/Program-Feature.md */ "./src/articals/Program-Feature.md");
 var MainPage = /** @class */ (function (_super) {
     __extends(MainPage, _super);
     function MainPage() {
