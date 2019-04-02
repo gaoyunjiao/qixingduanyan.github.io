@@ -1,12 +1,11 @@
 // color
-@mainColor: #159963;
-@secondColor: #85d64d;
-@darkColor: #373737;
-@warnColor: #fb5f5f;
-@baseFontColor: white;
+@mainColor: #2878ff;
+@secondColor: #f9f9f9;
+@baseFontColor: #6e747d;
+@baseColor: #ffffff;
 
 // height
-@baseHeaderHeight: 2rem;
+@baseHeaderHeight: 3rem;
 
 // padding
 @basePadding: 0.5rem;
@@ -23,8 +22,9 @@
 
 // header.tsx
 .docHeader {
+  z-index: 1000;
   height: @baseHeaderHeight;
-  background-color: @mainColor;
+  background-color: @baseColor;
   color: @baseFontColor;
   padding: @basePadding;
   display: flex;
@@ -35,6 +35,7 @@
   flex-direction: row;
   align-content: center;
   align-items: center;
+  box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 5px rgba(40, 120, 255, 0.1), 0 16px 24px 2px rgba(0, 0, 0, 0.05);
   width: 100%;
   width: 100%;
 }
@@ -46,6 +47,7 @@
   align-content: center;
   align-items: center;
   font-weight: bold;
+  color: @baseFontColor;
 }
 
 .menuList {
@@ -63,12 +65,12 @@
   padding: 0 1rem;
 
   a {
-    color: blanchedalmond;
+    color: @baseFontColor;
     font-weight: 300;
   }
 
-  a:hover {
-    color: white;
+  a:hover, a:active {
+    color: @mainColor;
     font-weight: 600;
   }
 }
