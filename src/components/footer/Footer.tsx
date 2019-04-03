@@ -1,9 +1,12 @@
 import * as React from 'react';
-import '../themes/themes.less';
+import './less/index.less';
+
 export interface FooterComponentProps {};
 
-export default class FooterComponent extends React.Component<FooterComponentProps, {}>{
+class FooterComponent extends React.Component<FooterComponentProps, {}>{
     render(){
         return <div className="footer">Powered by Yunjiao</div>
     }
 }
+
+export default FooterComponent

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import '../themes/themes.less';
+import '../../themes/themes.less';
 
 export interface HeaderComponentProps { };
 

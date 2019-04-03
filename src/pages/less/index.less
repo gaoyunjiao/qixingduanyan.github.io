@@ -1,0 +1,46 @@
+@import '../../themes/themes.less';
+
+// pages/main.tsx
+.mainPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    // header.tsx
+  .mainPageHeader {
+    z-index: 1000;
+    height: @baseHeaderHeight;
+    background-color: @baseColor;
+    color: @baseFontColor;
+    padding: @basePadding;
+    display: flex;
+    position: fixed;
+    left: 0;
+    top: 0;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.05), 0 1px 20px 5px rgba(40, 120, 255, 0.1), 0 1px 2px 1px rgba(0, 0, 0, 0.05);
+    width: 100%;
+  }
+  
+  // content
+  .mainPageContent{
+    display: flex;
+    margin-top: 45px;
+    background-color: @secondColor;
+    flex: 1;
+  }
+  
+  // footer
+  .mainPageFooter{
+    display: flex;
+    height: 2rem;
+    border-top: 1px solid #eee;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    font-size: 12px;
+  }
+}

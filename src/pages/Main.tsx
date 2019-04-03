@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Header, Footer, Container } from "../components";
-import '../themes/themes.less';
+import './less/index.less'
 import '../articals/Program-Feature.md'
 
 export interface MainPageProps { }
@@ -12,8 +12,12 @@ export class MainPage extends React.Component<MainPageProps, {}> {
         <div className="mainPageHeader">
           <Header />
         </div>
-        <Container />
-        <Footer />
+        <div className="mainPageContent">
+          <Container />
+        </div>
+        <div className="mainPageFooter">
+          <Footer />
+        </div>
       </div>
     );
   }
