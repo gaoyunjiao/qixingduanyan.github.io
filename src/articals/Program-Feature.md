@@ -12,9 +12,12 @@
 
 * A UI Program
 
-		for(let i = 0; i < 100; i++){
+```js
+for(let i = 0; i < 100; i++){
 		
-		}
+}
+
+```
 		
 [百度](www.baidu.com)
 
